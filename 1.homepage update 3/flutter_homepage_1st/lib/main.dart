@@ -1,0 +1,31 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_homepage_1st/card_page.dart';
+import 'package:flutter_homepage_1st/auth_page.dart';
+import 'package:flutter_homepage_1st/converter_page.dart';
+import 'package:flutter_homepage_1st/home_page.dart';
+import 'package:flutter_homepage_1st/listview_page.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.dark(),
+      home: const AuthPage(),
+      routes: {
+        // '/home': (context) => const HomePage(),
+        '/card': (context) => const CardPage(),
+        '/converter': (context) => const ConverterPage(),
+        '/listview': (context) => const ListviewPage(),
+        '/auth': (context) => const AuthPage(),
+      },
+    );
+  }
+}
